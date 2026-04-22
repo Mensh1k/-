@@ -17,7 +17,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add_scooter'])) {
     $success = "Самокат добавлен";
 }
 
-// Удаление самоката
+
 if(isset($_GET['delete_scooter'])) {
     $stmt = $pdo->prepare("DELETE FROM scooters WHERE id = ?");
     $stmt->execute([$_GET['delete_scooter']]);
